@@ -5,6 +5,12 @@
 - **[作者邮箱：15524261@qq.com](mailto:15524261@qq.com)**
 - **[码云项目地址：https://gitee.com/mycssweb/vue-simple-verify](https://gitee.com/mycssweb/vue-simple-verify)**
 
+## 截图
+
+![1](https://gitee.com/mycssweb/vue-simple-verify/docs/1.png)
+
+![2](https://gitee.com/mycssweb/vue-simple-verify/docs/2.png)
+
 ## 安装
 
 ```bash
