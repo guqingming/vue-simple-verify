@@ -1,21 +1,18 @@
-const merge = require('webpack-merge');
-const chokidar = require('chokidar');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const baseWebpackConfig = require('./webpack.base.conf');
+const merge = require('webpack-merge')
+const chokidar = require('chokidar')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const baseWebpackConfig = require('./webpack.base.conf')
 
-/**
- *
- */
 module.exports = merge(baseWebpackConfig, {
-  entry: './dev/dev.js',
+  entry: './dev/dev.ts',
   plugins: [
     new HtmlWebpackPlugin({
       template: './dev/dev.html',
-      inject: true,
-    }),
+      inject: true
+    })
   ],
   optimization: {
-    noEmitOnErrors: true,
+    noEmitOnErrors: true
   },
   devServer: {
     hot: true,
@@ -25,15 +22,15 @@ module.exports = merge(baseWebpackConfig, {
     stats: {
       children: false,
       modules: false,
-      chunks: false,
+      chunks: false
     },
     port: 8080,
     before (app, server) {
       chokidar.watch([
-        './**/*.html',
+        './**/*.html'
       ]).on('all', function () {
-        server.sockWrite(server.sockets, 'content-changed');
-      });
-    },
-  },
-});
+        server.sockWrite(server.sockets, 'content-changed')
+      })
+    }
+  }
+})

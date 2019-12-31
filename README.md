@@ -22,6 +22,7 @@ $ npm install vue-simple-verify
 ```js
 import Vue from 'vue'
 import VueSimpleVerify from 'vue-simple-verify'
+import '../node_modules/vue-simple-verify/dist/vue-simple-verify.css'
 
 Vue.component('vue-simple-verify', VueSimpleVerify)
 ```

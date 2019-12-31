@@ -8,31 +8,44 @@
   </div>
 </template>
 
-<script>
-import VueSimpleVerify from '../src/components/VueSimpleVerify'
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator'
+import VueSimpleVerify from '@components/VueSimpleVerify.vue'
 
-export default {
+// import VueSimpleVerify from 'vue-simple-verify'
+// import '../node_modules/vue-simple-verify/dist/vue-simple-verify.css'
+
+@Component({
+  name: 'Dev',
   components: {
     VueSimpleVerify
-  },
-  data() {
-    return {
-      isPass: false
-    }
-  },
-  methods: {
-    success() {
-      this.isPass = true
-    },
-    reset() {
-      this.$refs.verify.reset()
-      this.isPass = false
-    }
+  }
+})
+
+export default class extends Vue {
+  /**
+   * 初始数据
+   */
+  private isPass = false
+
+  /**
+   * 验证通过
+   */
+  private success() {
+    this.isPass = true
+  }
+
+  /**
+   * 重置
+   */
+  private reset() {
+    (this.$refs.verify as any).reset()
+    this.isPass = false
   }
 }
 </script>
 
-<style>
+<style lang="scss">
   html,
   body {
     margin: 0;

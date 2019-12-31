@@ -22,25 +22,34 @@ module.exports = {
   },
   devtool,
   resolve: {
-    extensions: ['.js', '.vue'],
+    extensions: ['.js', '.ts', '.vue'],
     alias: {
-      'src': path.resolve(__dirname, '../src'),
-      'assets': path.resolve(__dirname, '../docs/assets'),
-      'mixins': path.resolve(__dirname, '../src/mixins'),
-      'components': path.resolve(__dirname, '../src/components'),
+      '@dev': path.resolve(__dirname, '../dev'),
+      '@src': path.resolve(__dirname, '../src'),
+      '@components': path.resolve(__dirname, '../src/components'),
       'vue$': 'vue/dist/vue.esm.js',
     },
   },
   module: {
-    rules: [{
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        include: path.resolve(__dirname, '../'),
+        exclude: /node_modules/,
+        options: {
+          appendTsSuffixTo: [/\.vue$/]
+        }
+      },
+      {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
         include: path.resolve(__dirname, '../'),
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.s?css$/,
@@ -48,8 +57,8 @@ module.exports = {
           extractOrInjectStyles,
           'css-loader',
           'postcss-loader',
-          'sass-loader',
-        ],
+          'sass-loader'
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -62,8 +71,8 @@ module.exports = {
           },
           "image-webpack-loader"
         ]
-      },
-    ],
+      }
+    ]
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -72,10 +81,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'vue-simple-verify.css',
     }),
-    new VueLoaderPlugin(),
+    new VueLoaderPlugin()
   ],
   stats: {
     children: false,
-    modules: false,
+    modules: false
   }
 }
