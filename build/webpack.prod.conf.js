@@ -13,7 +13,7 @@ module.exports = merge(baseWebpackConfig, {
   optimization: {
     minimizer: [
       new TerserPlugin({
-        sourceMap: true
+        sourceMap: false
       })
     ]
   }

@@ -5,9 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const env = process.env.NODE_ENV === 'production' ?
   'production' :
-  'development';
-
-const devtool = env === 'production' ? 'source-map' : 'eval-source-map'
+  'development'
 
 const extractOrInjectStyles = env !== 'production' ?
   'vue-style-loader' :
@@ -20,7 +18,6 @@ module.exports = {
     publicPath: '/',
     filename: '[name].js',
   },
-  devtool,
   resolve: {
     extensions: ['.js', '.ts', '.vue'],
     alias: {
@@ -79,7 +76,7 @@ module.exports = {
       'process.env': env,
     }),
     new MiniCssExtractPlugin({
-      filename: 'vue-simple-verify.css',
+      filename: 'vue-simple-verify.css'
     }),
     new VueLoaderPlugin()
   ],
