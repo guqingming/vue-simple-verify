@@ -39,7 +39,8 @@ export default class extends Vue {
    * 重置
    */
   private reset() {
-    (this.$refs.verify as any).reset()
+    const $verify = this.$refs.verify as VueSimpleVerify.SimpleVerify
+    $verify.reset()
     this.isPass = false
   }
 }

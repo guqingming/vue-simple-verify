@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-verify",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "vue-simple-verify",
   "author": "Gu Qingming <15524261@qq.com>",
   "homepage": "https://gitee.com/mycssweb/vue-simple-verify",
@@ -17,7 +17,7 @@
     "url": "https://gitee.com/mycssweb/vue-simple-verify.git"
   },
   "dependencies": {
-    "vue-simple-verify": "^1.0.2",
+    "vue-simple-verify": "^1.0.5",
     "core-js": "^3.5.0",
     "vue": "^2.6.10",
     "vuex": "3.1.0",

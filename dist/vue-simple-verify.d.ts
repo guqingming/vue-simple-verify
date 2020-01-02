@@ -1,3 +1,7 @@
+import { Vue } from 'vue-property-decorator'
+
 declare module 'vue-simple-verify' {
-  export function reset(): void;
+  export interface SimpleVerify extends Vue {
+    reset(): void;
+  }
 }
