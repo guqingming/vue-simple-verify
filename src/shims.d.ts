@@ -22,7 +22,3 @@ declare module '*.jpg' {
 declare module '*.js' {
   export const js: any
 }
-
-declare module 'vue-simple-verify' {
-  export default any
-}
