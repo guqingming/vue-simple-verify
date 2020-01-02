@@ -3,6 +3,7 @@
 ## 简易滑动验证之vue插件
 
 - **[作者邮箱：15524261@qq.com](mailto:15524261@qq.com)**
+- **[github项目地址：https://github.com/guqingming/vue-simple-verify](https://github.com/guqingming/vue-simple-verify)**
 - **[码云项目地址：https://gitee.com/mycssweb/vue-simple-verify](https://gitee.com/mycssweb/vue-simple-verify)**
 
 ## 截图

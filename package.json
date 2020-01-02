@@ -1,9 +1,9 @@
 {
   "name": "vue-simple-verify",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "vue-simple-verify",
   "author": "Gu Qingming <15524261@qq.com>",
-  "homepage": "https://gitee.com/mycssweb/vue-simple-verify",
+  "homepage": "https://github.com/guqingming/vue-simple-verify",
   "private": false,
   "main": "dist/vue-simple-verify.js",
   "license": "MIT",
@@ -14,7 +14,7 @@
   "types": "dist/vue-simple-verify.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/mycssweb/vue-simple-verify.git"
+    "url": "https://github.com/guqingming/vue-simple-verify"
   },
   "dependencies": {
     "vue-simple-verify": "^1.0.5",
