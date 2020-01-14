@@ -18,7 +18,7 @@
 $ npm install vue-simple-verify
 ```
 
-注册组件
+## 注册组件
 
 ```js
 import Vue from 'vue'
@@ -28,13 +28,13 @@ import '../node_modules/vue-simple-verify/dist/vue-simple-verify.css'
 Vue.component('vue-simple-verify', VueSimpleVerify)
 ```
 
-使用组件
+## 使用组件
 
 ```html
 <vue-simple-verify ref="verify" @success="success" />
 ```
 
-参数说明
+## 参数说明
 
 | 字段名        | 字段类型 | 默认值                   | 说明                       |
 | ------------- | -------- | ------------------------ | -------------------------- |
@@ -50,13 +50,13 @@ Vue.component('vue-simple-verify', VueSimpleVerify)
 | successIcon   | string   | 默认图片                 | 成功后的图标               |
 
 
-事件
+## 事件
 
 | 事件名  | 说明                 | 回调参数 |
 | ------- | -------------------- | -------- |
 | success | 验证完成后的回调函数 | -        |
 
-方法
+## 方法
 
 | 事件名 | 说明                   | 参数 |
 | ------ | ---------------------- | ---- |

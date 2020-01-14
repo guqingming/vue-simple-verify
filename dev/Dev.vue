@@ -10,10 +10,10 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-// import VueSimpleVerify from '@components/VueSimpleVerify.vue'
+import VueSimpleVerify from '@components/VueSimpleVerify.vue'
 
-import VueSimpleVerify from 'vue-simple-verify'
-import '../node_modules/vue-simple-verify/dist/vue-simple-verify.css'
+// import VueSimpleVerify from 'vue-simple-verify'
+// import 'vue-simple-verify/dist/vue-simple-verify.css'
 
 @Component({
   name: 'Dev',

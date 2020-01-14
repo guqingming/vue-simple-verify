@@ -22,3 +22,9 @@ declare module '*.jpg' {
 declare module '*.js' {
   export const js: any
 }
+
+declare namespace VueSimpleVerify {
+  export interface SimpleVerify extends Vue {
+    reset(): void;
+  }
+}
