@@ -110,15 +110,26 @@ export default class extends Vue {
      * 绑定事件
      */
     this.$bar.addEventListener('mouseenter', this.mouseenter)
+    this.$bar.addEventListener('touchstart', this.mouseenter)
     this.$bar.addEventListener('mouseleave', this.mouseleave)
+    this.$bar.addEventListener('touchend', this.mouseleave)
     this.$bar.addEventListener('mousedown', this.mousedown)
-    document.body.addEventListener('mousemove', this.mousemove)
+    this.$bar.addEventListener('touchstart', this.mousedown)
+    document.body.addEventListener('mousemove', this.mousemove, {
+      passive: false
+    })
+    document.body.addEventListener('touchmove', this.mousemove, {
+      passive: false
+    })
     document.body.addEventListener('mouseup', this.mouseup)
+    document.body.addEventListener('touchend', this.mouseup)
     this.$verify.addEventListener('reset', this.reset)
   }
   destroyed() {
     document.body.removeEventListener('mousemove', this.mousemove)
+    document.body.removeEventListener('touchmove', this.mousemove)
     document.body.removeEventListener('mouseup', this.mouseup)
+    document.body.removeEventListener('touchend', this.mouseup)
   }
 
   /**
@@ -151,7 +162,7 @@ export default class extends Vue {
     if (this.isSuccess) {
       return
     }
-    this.x1 = e.x
+    this.x1 = e.x || e.targetTouches[0].clientX
     this.isMousedown = true
   }
 
@@ -164,7 +175,7 @@ export default class extends Vue {
     }
     e.preventDefault()
     e.stopPropagation()
-    this.x2 = e.x
+    this.x2 = e.x || e.targetTouches[0].clientX
     let diff = this.x2 - this.x1
     if (diff < 0) {
       diff = 0
