@@ -72,7 +72,7 @@ export default class extends Vue {
   }
   /** 成功图标 */
   get iconStyle() {
-    return `background: url(${ successImage }) no-repeat;`
+    return `background: url(${ this.successIcon }) no-repeat;`
   }
   /** 按钮 */
   get $bar() {
